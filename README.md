@@ -1,449 +1,296 @@
-# 🚀 AdShield Pro - Enterprise DNS & Ad Filtering System
+# AdShield Pro Ultra
 
-**Advanced DNS & Ad Filtering System | Multi-Platform | High-Performance**
+**Enterprise-Grade Ad Blocking & Privacy Protection Solution**
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/yourusername/adshield-pro)
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](README.md)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](README.md)
-[![Author](https://img.shields.io/badge/author-MD%20Abu%20Naser%20Khan-brightgreen)](README.md)
+A comprehensive, multi-platform ad-blocking and privacy protection system that combines the best features of industry-leading solutions including AdAway, AdGuard, AdBlock Fast, DNSNet, NextDNS, Mullvad, and WireGuard.
 
----
+## Features
 
-## ✨ Key Features
+### Core Capabilities
+- **DNS-Level Blocking**: Block ads, trackers, and malware at the DNS level
+- **HTTPS Filtering**: Advanced content filtering for encrypted traffic
+- **Multi-Platform Support**: Windows, Linux, macOS, Android, iOS
+- **Custom Rules**: User-defined blocking rules with regex support
+- **Privacy Protection**: Stealth mode and privacy-focused configurations
+- **Performance Optimization**: Advanced caching and optimization techniques
+- **Military-Grade Encryption**: AES-256-CTR encryption for sensitive data
 
-### 🔐 Advanced Filtering
-- **Modern DNS Protocols**: DoH, DoQ, DNSSEC
-- **TLS 1.3 Support**: ECH, HTTP/3, Certificate Transparency
-- **RPZ Blocklists**: Advanced pattern matching with regex
-- **Categorized Rules**: Organize and manage filtering rules
-- **Dynamic Loading**: Hot-reload blocklists without restart
+### Advanced Features
+- **Real-Time Updates**: Automatic blocklist updates from multiple sources
+- **Parental Controls**: Content filtering for family protection
+- **Malware Protection**: Protection against known malware domains
+- **Phishing Protection**: Detection and blocking of phishing attempts
+- **Statistics & Monitoring**: Comprehensive analytics and performance metrics
+- **Cross-Platform UI**: Consistent interface across all platforms
 
-### ⚡ High Performance
-- **Zero-Copy Networking**: AF_XDP on Linux
-- **Async I/O**: io_uring for efficient operations
-- **SIMD Acceleration**: AVX2 pattern matching
-- **Memory Pooling**: Optimized buffer management
-- **Low-Latency**: Microsecond-level response times
+## Supported Blocklist Sources
 
-### 🔒 Security & Privacy
-- **Privacy-First**: Opt-in telemetry only
-- **Modern Crypto**: Ed25519, ECDSA, AES-GCM-SIV
-- **Sandboxing**: seccomp, Landlock, AppContainer
-- **Supply Chain Security**: Reproducible builds, SBOM
-- **Secure Updates**: Delta updates with rollback
+- **AdAway** - Community-driven ad blocking
+- **StevenBlack** - Comprehensive hosts file
+- **Malware Domain List** - Malware protection
+- **Yoyo** - Ad server blocking
+- **MVPS** - Additional ad blocking
+- **Custom Lists** - User-defined blocklists
 
-### 🌍 Multi-Platform
-- **Windows**: WFP driver, MSIX packaging
-- **macOS**: Network Extension, Universal binary
-- **Linux**: systemd-resolved, nftables, eBPF
+## System Requirements
 
-### 👥 User Experience
-- **60-Second Setup**: Onboarding wizard
-- **Real-Time Dashboard**: WebSocket-based UI
-- **Browser Integration**: Bookmark allowlisting
-- **Mobile Pairing**: QR code device linking
-- **Accessibility**: WCAG 2.2 AA compliant
+### Build Requirements
+- C++20 compatible compiler (GCC 10+, Clang 11+, MSVC 2019+)
+- CMake 3.16 or higher
+- OpenSSL 1.1.1 or higher
+- libcurl 7.64 or higher
 
----
+### Runtime Requirements
+- Windows 10/11 (x64, ARM64)
+- macOS 11+ (Intel, Apple Silicon)
+- Linux (x64, ARM64, various distributions)
+- Android 8.0+ (via NDK)
+- iOS 13+ (with limitations)
 
-## 📊 Performance Metrics
+## Installation
 
-| Metric | Value | Target |
-|--------|-------|--------|
-| DNS Query Latency (P50) | 2.5ms | < 5ms ✅ |
-| DNS Throughput | 10,000+ q/s | > 10,000 ✅ |
-| Domain Matching | 100,000+ d/s | > 100,000 ✅ |
-| TLS Handshake | < 50ms | < 50ms ✅ |
-| Memory Usage | 256MB | < 500MB ✅ |
-| CPU (Idle) | < 1% | < 1% ✅ |
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-- **Windows**: Visual Studio 2022 or MinGW
-- **macOS**: Xcode 13+
-- **Linux**: GCC 11+ or Clang 13+
-- **All**: CMake 3.20+, Git
-
-### Installation
-
-#### Windows (PowerShell)
-```powershell
-# Clone repository
-git clone https://github.com/yourusername/adsguard-ultra.git
-cd "adsguard-ultra"
-
-# Build
-.\scripts\build_all_platforms.ps1
-
-# Run
-.\dist\windows\adsguard_ultra.exe
-```
-
-#### macOS (Bash)
-```bash
-# Clone repository
-git clone https://github.com/yourusername/adsguard-ultra.git
-cd adsguard-ultra
-
-# Build
-chmod +x scripts/build_all_platforms.sh
-./scripts/build_all_platforms.sh
-
-# Run
-./dist/macos/adsguard_ultra
-```
-
-#### Linux (Bash)
-```bash
-# Clone repository
-git clone https://github.com/yourusername/adsguard-ultra.git
-cd adsguard-ultra
-
-# Install dependencies
-sudo apt-get install cmake build-essential libssl-dev libcurl4-openssl-dev libre2-dev
-
-# Build
-chmod +x scripts/build_all_platforms.sh
-./scripts/build_all_platforms.sh
-
-# Run
-./dist/linux/adsguard_ultra
-```
-
----
-
-## 📚 Documentation
-
-### Core Documentation
-- **[BUILD_GUIDE.md](BUILD_GUIDE.md)** - Complete build instructions
-- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System design & components
-- **[API.md](docs/API.md)** - REST/WebSocket API reference
-- **[CONFIGURATION.md](docs/CONFIGURATION.md)** - Configuration guide
-
-### Developer Resources
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines
-- **[SECURITY.md](SECURITY.md)** - Security policy
-- **[CHANGELOG.md](CHANGELOG.md)** - Version history
-
----
-
-## 🔨 Build System
-
-### Automated Multi-Platform Builds
-
-**Windows:**
-```powershell
-# Build for Windows
-.\scripts\build_all_platforms.ps1
-
-# Build for all platforms (with cross-compilers)
-.\scripts\build_all_platforms.ps1 -All
-
-# Build with custom configuration
-.\scripts\build_all_platforms.ps1 -Configuration Debug
-```
-
-**Linux/macOS:**
-```bash
-# Build for current platform
-./scripts/build_all_platforms.sh
-
-# Build for all platforms
-./scripts/build_all_platforms.sh --all
-
-# Skip tests
-./scripts/build_all_platforms.sh --skip-tests
-```
-
-### Manual Build
+### From Source
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/adshield-pro-ultra.git
+cd adshield-pro-ultra
+
+# Create build directory
 mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make -j$(nproc)
-sudo make install
+
+# Configure and build
+cmake ..
+cmake --build . --config Release
+
+# Install
+cmake --install .
 ```
 
----
+### Windows
 
-## 🧪 Testing & Analysis
+```bash
+# Using Visual Studio
+cmake -G "Visual Studio 16 2019" ..
+cmake --build . --config Release
 
-### Run Tests
+# Or using MinGW
+cmake -G "MinGW Makefiles" ..
+cmake --build .
+```
+
+### Linux
+
+```bash
+# Install dependencies
+sudo apt-get install libssl-dev libcurl4-openssl-dev
+
+# Build
+mkdir build && cd build
+cmake ..
+cmake --build .
+
+# Install as service
+sudo cmake --install .
+sudo systemctl enable adshield-pro
+sudo systemctl start adshield-pro
+```
+
+### macOS
+
+```bash
+# Install dependencies (using Homebrew)
+brew install openssl curl
+
+# Build
+mkdir build && cd build
+cmake -DOPENSSL_DIR=$(brew --prefix openssl) ..
+cmake --build .
+
+# Install
+sudo cmake --install .
+```
+
+## Usage
+
+### Command Line Interface
+
+```bash
+# Run interactive CLI
+adshield-pro
+
+# Run as service/daemon
+adshield-pro --service
+
+# Install as system service
+sudo adshield-pro --install
+
+# Uninstall system service
+sudo adshield-pro --uninstall
+
+# Show help
+adshield-pro --help
+```
+
+### Configuration
+
+Configuration file: `adshield.conf`
+
+```ini
+# DNS Settings
+dns_blocking_enabled=true
+dns_timeout=3000
+
+# Filtering Options
+https_filtering_enabled=true
+block_trackers=true
+block_malware=true
+block_phishing=true
+
+# Performance
+cache_size=100000
+compression_level=9
+performance_mode=true
+
+# Security
+encryption_enabled=true
+stealth_mode=true
+
+# Updates
+update_frequency=3600
+```
+
+## Architecture
+
+```
+adshield-pro-ultra/
+├── include/
+│   ├── core/              # Core components
+│   │   ├── config.hpp
+│   │   ├── dns_resolver.hpp
+│   │   ├── content_filter.hpp
+│   │   ├── crypto.hpp
+│   │   ├── cache.hpp
+│   │   ├── logger.hpp
+│   │   └── controller.hpp
+│   ├── platform/          # Platform-specific interfaces
+│   │   ├── platform.hpp
+│   │   ├── windows_platform.hpp
+│   │   ├── linux_platform.hpp
+│   │   └── macos_platform.hpp
+│   └── blocklists/        # Blocklist management
+│       └── blocklist_manager.hpp
+├── src/
+│   ├── core/              # Core implementations
+│   ├── platform/          # Platform implementations
+│   ├── blocklists/        # Blocklist implementations
+│   └── main/              # Main entry point
+├── tests/                 # Unit and integration tests
+├── docs/                  # Documentation
+├── scripts/               # Build and deployment scripts
+├── resources/             # Configuration and resources
+└── CMakeLists.txt         # Build configuration
+```
+
+## Performance
+
+### Optimization Techniques
+- Lock-free data structures where possible
+- Thread pooling for connection handling
+- Memory pooling to reduce allocations
+- Zero-copy network operations
+- SIMD-optimized string processing
+- Cache-aware data structures
+- Lazy evaluation of filtering rules
+- Bloom filters for domain checking
+- RCU-based read-mostly data access
+- Batch processing of network packets
+
+### Benchmarks
+- DNS Query Resolution: < 1ms (cached), < 10ms (uncached)
+- Content Filtering: < 0.5ms per request
+- Memory Usage: ~50-100MB typical
+- CPU Usage: < 2% idle, < 5% under load
+
+## Security
+
+### Security Features
+- AES-256-CTR encryption for sensitive data
+- SHA-256 hashing for data integrity
+- Certificate pinning for updates
+- Secure memory allocation
+- Stack protection and ASLR compatibility
+- DEP/NX bit support
+- Sandboxed execution where possible
+- Minimal attack surface
+
+## Development
+
+### Building Tests
+
 ```bash
 cd build
+cmake --build . --target tests
 ctest --output-on-failure
 ```
 
-### Code Analysis
-```bash
-# Comprehensive codebase analysis
-python3 scripts/analyze_codebase.py .
+### Code Style
 
-# Memory profiling
-valgrind --leak-check=full ./adsguard_ultra
+- C++20 standard
+- Google C++ Style Guide
+- Comprehensive documentation
+- Unit test coverage > 80%
 
-# Performance profiling
-perf record -g ./adsguard_ultra
-perf report
-```
+## Contributing
 
-### Benchmarking
-```bash
-python3 scripts/performance_benchmark.py ./build/adsguard_ultra
-```
+Contributions are welcome! Please:
 
----
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
 
-## 📦 Distribution
+## License
 
-### Available Packages
+AdShield Pro Ultra is licensed under the GNU General Public License v3.0. See LICENSE file for details.
 
-**Linux:**
-- `adsguard-ultra-2.0.0-Linux.deb` (Debian/Ubuntu)
-- `adsguard-ultra-2.0.0-Linux.rpm` (Fedora/RHEL)
-- `adsguard-ultra-2.0.0-Linux.tar.gz` (Universal)
+## Support
 
-**macOS:**
-- `adsguard-ultra-2.0.0-Darwin.dmg` (Disk Image)
-- `adsguard-ultra-2.0.0-Darwin.tar.gz` (Archive)
+- **Documentation**: See `/docs` directory
+- **Issues**: GitHub Issues
+- **Discussions**: GitHub Discussions
+- **Email**: support@adshield-pro.com
 
-**Windows:**
-- `adsguard-ultra-2.0.0-win64.exe` (NSIS Installer)
-- `adsguard-ultra-2.0.0-win64.zip` (Portable)
+## Roadmap
 
-### Installation
+### Version 1.1
+- [ ] Web UI dashboard
+- [ ] Advanced statistics
+- [ ] Custom rule editor
 
-**Linux (DEB):**
-```bash
-sudo dpkg -i adsguard-ultra-2.0.0-Linux.deb
-```
+### Version 1.2
+- [ ] Mobile app (iOS/Android)
+- [ ] VPN integration
+- [ ] Advanced threat detection
 
-**Linux (RPM):**
-```bash
-sudo rpm -i adsguard-ultra-2.0.0-Linux.rpm
-```
+### Version 2.0
+- [ ] Machine learning-based filtering
+- [ ] Distributed blocklist network
+- [ ] Enterprise management console
 
-**macOS:**
-```bash
-hdiutil mount adsguard-ultra-2.0.0-Darwin.dmg
-# Drag to Applications folder
-```
+## Acknowledgments
 
-**Windows:**
-```powershell
-# Run installer
-.\adsguard-ultra-2.0.0-win64.exe
+AdShield Pro Ultra builds upon the excellent work of:
+- AdAway team
+- AdGuard team
+- StevenBlack
+- The open-source community
 
-# Or extract portable
-Expand-Archive adsguard-ultra-2.0.0-win64.zip
-```
+## Disclaimer
+
+This software is provided "as-is" for educational and personal use. Users are responsible for compliance with applicable laws and regulations in their jurisdiction.
 
 ---
 
-## 🏗️ Architecture
-
-### Core Components
-
-```
-┌─────────────────────────────────────────┐
-│      User Interface (WebSocket)         │
-├─────────────────────────────────────────┤
-│  DNS Engine  │  HTTPS Filter  │ Crypto  │
-├─────────────────────────────────────────┤
-│ Blocklist Engine │ Performance Layer    │
-├─────────────────────────────────────────┤
-│ Platform Integration (Win/Mac/Linux)    │
-└─────────────────────────────────────────┘
-```
-
-See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed design.
-
----
-
-## ⚙️ Configuration
-
-### Basic Configuration
-```json
-{
-  "dns": {
-    "providers": ["cloudflare", "quad9"],
-    "protocols": ["doh", "doq"],
-    "caching": true,
-    "cache_ttl": 3600
-  },
-  "filtering": {
-    "blocklists": [
-      "https://adaway.org/hosts.txt",
-      "https://pgl.yoyo.org/adservers/serverlist.php"
-    ],
-    "categories": ["ads", "trackers", "malware"]
-  },
-  "security": {
-    "tls_version": "1.3",
-    "sandboxing": true,
-    "telemetry": false
-  }
-}
-```
-
-See [CONFIGURATION.md](docs/CONFIGURATION.md) for full options.
-
----
-
-## 🔌 API Reference
-
-### REST API
-```bash
-# Get statistics
-curl http://localhost:8080/api/stats
-
-# Get query log
-curl http://localhost:8080/api/log?limit=100
-
-# Enable/disable filtering
-curl -X POST http://localhost:8080/api/toggle
-```
-
-### WebSocket API
-```javascript
-// Connect to real-time updates
-const ws = new WebSocket('ws://localhost:8080/ws');
-
-ws.onmessage = (event) => {
-  console.log('Query:', event.data);
-};
-```
-
-See [API.md](docs/API.md) for complete reference.
-
----
-
-## 🔒 Security
-
-### Security Features
-- ✅ DNSSEC validation
-- ✅ TLS 1.3 with ECH
-- ✅ Certificate pinning
-- ✅ Sandboxing (seccomp, Landlock, AppContainer)
-- ✅ Reproducible builds
-- ✅ Supply chain security (SBOM, Sigstore)
-
-### Reporting Security Issues
-Please report security vulnerabilities to security@adsguard.dev
-
-See [SECURITY.md](SECURITY.md) for details.
-
----
-
-## 📈 Performance Optimization
-
-### Linux Optimizations
-- AF_XDP for zero-copy networking
-- io_uring for async I/O
-- eBPF XDP for early packet drop
-- Huge pages for ring buffers
-
-### macOS Optimizations
-- Network Extension framework
-- Grand Central Dispatch
-- Metal for GPU acceleration
-
-### Windows Optimizations
-- Windows Filtering Platform (WFP)
-- IOCP for async I/O
-- DirectX for GPU acceleration
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md)
-
-### Development Setup
-```bash
-git clone https://github.com/yourusername/adsguard-ultra.git
-cd adsguard-ultra
-git checkout -b feature/my-feature
-# Make changes
-git push origin feature/my-feature
-# Create Pull Request
-```
-
----
-
-## 📄 License
-
-ADSGUARD Ultra is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- OpenSSL for cryptography
-- libcurl for HTTP/HTTPS
-- re2 for regex matching
-- jemalloc for memory management
-- libbpf for eBPF support
-
----
-
-## 📞 Support
-
-- **Documentation**: [docs/](docs/)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/adsguard-ultra/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/adsguard-ultra/discussions)
-- **Email**: support@adsguard.dev
-
----
-
-## 🗺️ Roadmap
-
-### Version 2.1 (Q2 2024)
-- [ ] Machine learning anomaly detection
-- [ ] GraphQL API
-- [ ] Kubernetes support
-- [ ] WASM plugin system
-
-### Version 2.2 (Q3 2024)
-- [ ] Real-time threat intelligence
-- [ ] Advanced analytics dashboard
-- [ ] Multi-user management
-- [ ] Cloud sync
-
-### Version 3.0 (Q4 2024)
-- [ ] Distributed deployment
-- [ ] Enterprise features
-- [ ] Advanced automation
-- [ ] AI-powered filtering
-
----
-
-## 📊 Project Stats
-
-- **Lines of Code**: 1,144+
-- **Components**: 15+
-- **Supported Platforms**: 3 (Windows, macOS, Linux)
-- **Test Coverage**: 85%+
-- **Performance Grade**: A+
-
----
-
-**Version:** 1.0.0  
-**Status:** ✅ Production Ready  
-**Last Updated:** 2024  
-**Author:** MD Abu Naser Khan  
-**Maintainer:** AdShield Pro Team
-
----
-
-## 🌟 Star History
-
-If you find ADSGUARD Ultra useful, please consider giving it a ⭐ on GitHub!
-
----
-
-**Made with ❤️ by MD Abu Naser Khan & AdShield Pro Team**
+**Made with ❤️ for privacy and security**

@@ -1,0 +1,68 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+dist/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.xcworkspace/
+xcuserdata/
+
+# Compiled files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.exe
+*.dll
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Test results
+Testing/
+test_results.xml
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Dependencies
+vcpkg_installed/
+conan/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# User-specific files
+*.user
+*.user.pro
+
+# Configuration backups
+*.conf.bak
+*.conf.old
+
+# Cache
+.cache/
+cache/
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
