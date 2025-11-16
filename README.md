@@ -4,6 +4,18 @@
 
 A comprehensive, multi-platform ad-blocking and privacy protection system that combines the best features of industry-leading solutions including AdAway, AdGuard, AdBlock Fast, DNSNet, NextDNS, Mullvad, and WireGuard.
 
+---
+
+## 👨‍💻 Author
+
+**MD Abu Naser Khan**  
+GitHub: [@joyelkhan](https://github.com/joyelkhan)  
+Email: support@adshield-pro.com  
+
+For more information, see [ABOUT.md](ABOUT.md)
+
+---
+
 ## Features
 
 ### Core Capabilities
